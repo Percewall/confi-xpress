@@ -1,0 +1,92 @@
+<!DOCTYPE html lang="es" >
+<head>
+<title>El Confidencial Express</title>
+<link rel="stylesheet" type="text/css" href="{{ base_url }}/static/css/ecx.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet">
+<script src="https://use.fontawesome.com/560580c268.js"></script>
+</head>
+<body class="body-content">	
+	<heder class="confi-fixed">
+		<div class="confi-blue">
+			<i class="fa fa-bars fleft" aria-hidden="true"></i>
+			<h4 class="fleft">El Confidencial</h4>
+			<i class="fa fa-search fleft fa-space" aria-hidden="true"></i>
+			<div class="fright">
+				<a href="http://www.elconfidencial.com/" class="xpress-link">Iniciar sesión</a>
+				<i class="fa fa-ellipsis-v fa-space" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div class="xpress-white">
+			<h2 class="fleft">El Confidencial</h2>
+			<i class="fa fa-quote-right" aria-hidden="true"></i>
+			<div class="fright">
+				<a href="#" class="xpress-link lil-link">Descargar</a>
+				<a href="#" class="xpress-link lil-link">Compartir</a>
+			</div>
+		</div>
+	</header>
+	<main class="xpress-container">
+		{% for type, editors in editorials %}		
+			{% for key, editorial in editors %} 
+				{% if editorial.template == 'thumb' %}
+			        <div class="pin-new pin-normal"> 			
+						<figure class="pin-figure fleft">
+							<img src="{{editorial.img}}"/>
+						</figure>
+						<div class"pin-top fright">
+							<span class="pin-section">{{editorial.section.name}}</span>
+							<h1 class="pin-title">{{ editorial.title }}</h1>
+						</div>
+						<ul class="pin-list">
+							{% for hl in editorial.highlights %} 
+								<li class="pin-list-item">
+								<i class="fa fa-hashtag" aria-hidden="true"></i>
+								<span class="highlight-text">{{ hl }}</span>
+							</li>
+							{% endfor %}																		
+						</ul>
+						<span class="pin-author serif-font"><span class="pin-separator"></span>{{editorial.alias.name}}</span>
+						<div class="pin-bottom">
+							<span class="pin-separator"></span>
+							<a href="{{editorial.url}}" class="xpress-link lil-link fleft">Noticia completa</a>
+							<div class="fright">
+								<span class="lovemeter fleft">65%</span>
+								<i class="fa fa-heart lovemeter fleft" aria-hidden="true"></i>
+								<a href="#" class="xpress-link lil-link fleft">Compartir</a>
+							</div>
+						</div>
+					</div>
+			    {% endif %} 				     
+				{% if editorial.template == 'pill' %}
+					<div class="pin-new pin-big"> 
+						<span class="pin-section">{{editorial.section.name}}</span>
+						<h1 class="pin-title">{{ editorial.title }}</h1>
+						<ul class="pin-list">
+							{% for hl in editorial.highlights %} 
+								<li class="pin-list-item">
+								<i class="fa fa-hashtag" aria-hidden="true"></i>
+								<span class="highlight-text">{{ hl }}</span>
+							</li>
+							{% endfor %}																		
+						</ul>
+						<span class="pin-author serif-font"><span class="pin-separator"></span>{{editorial.alias.name}}</span>
+						<figure class="pin-figure">
+							<img src="{{editorial.img}}"/>
+						</figure>
+						<div class="pin-bottom">
+							<span class="pin-separator"></span>
+							<a href="{{editorial.url}}" class="xpress-link lil-link fleft">Noticia completa</a>
+							<div class="fright">
+								<span class="lovemeter fleft">65%</span>
+								<i class="fa fa-heart lovemeter fleft" aria-hidden="true"></i>
+								<a href="#" class="xpress-link lil-link fleft">Compartir</a>
+							</div>
+						</div>
+					</div>
+				{% endif %} 	 	
+		    {% endfor %}		
+	    {% endfor %}		
+	</main>
+	<script src="https://use.fontawesome.com/560580c268.js"></script>
+</body>
+</html>

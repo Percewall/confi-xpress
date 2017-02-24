@@ -1,0 +1,134 @@
+/* Estilos para El Confidencial Xpress */
+/* helpers */
+.fleft {float: left;}
+.fright {float: right;}
+.serif-font {font-family: 'Playfair Display', serif;}
+div, a, span, figure {
+	box-sizing: border-box;
+	margin: 0;
+}
+span {display: block;}
+h1, h2, h3, h4 {
+	font-family: 'Playfair Display', serif;
+	margin: 0;
+}
+ul, li {
+	list-style: none;
+	padding: 0;
+}
+.body-content {
+    background-color: #DEDEDE;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Genéricos */
+.xpress-link {
+	color: #1187b8;
+	text-decoration: none;
+}
+.xpress-link:hover {color: #FFF;}
+.lil-link {
+	font-size: 13px;
+	padding: 4px 12px;
+	display: block;
+}
+.lil-link:hover {color: #0d3749;}
+.fa {margin: 2px 4px;}
+.fa-space {margin: 0 16px;}
+.pin-separator {
+	width: 32%;
+	border-top: 1px solid #DEDEDE;
+	position: absolute;
+	top: 0;
+}
+.lovemeter {color: #838383;}
+/* Cabeceras y elementos fijos */
+.confi-fixed {
+	width: 100%;
+	overflow: hidden;
+}
+.confi-blue {
+	background-color: #0d3749;
+	color: #FFF;
+	padding: 10px 6px;
+	overflow: hidden;
+}
+.xpress-white {
+	background-color: #FFF;
+	overflow: hidden;
+	color: #0d3749;
+	padding: 10px 6px;
+}
+.xpress-white .fa {color: #DEDEDE;}
+.xpress-white .lil-link {
+	margin-top: 4px;
+	display: block;
+    float: left;
+}
+/* Contenedor de noticias */
+.xpress-container {
+	overflow: hidden;
+	padding: 10px;
+}
+/* Noticias */
+.pin-new {
+	padding: 10px 0;
+	overflow: hidden;
+}
+.pin-section {color: #838383;}
+.pin-list-item {
+	padding: 10px 4px 10px 26px;
+	position: relative;
+}
+.pin-list-item .fa {
+	position: absolute;
+	left: 0;
+	color: #DEDEDE;
+}
+.pin-figure {text-align: center;}
+.pin-figure img {
+	width: 100%;
+	height: auto;
+}
+.pin-author {
+	color: #838383;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 10px 26px;
+}
+.pin-bottom {
+	padding: 10px 26px;
+	overflow: hidden;
+	font-size: 14px;
+}
+/* Noticia destacada de 1er nivel */
+.pin-big {
+	background-color: #FFF;
+	border-bottom: 1px solid #C5C5C5;
+}
+.pin-big .pin-section {padding: 20px 26px 0 26px;}
+.pin-big .pin-title {
+	padding: 10px 26px;
+}
+.pin-big .pin-list {padding: 10px 26px;}
+/* Noticia normal */
+.pin-normal {
+	padding: 20px 0;
+}
+.pin-normal .pin-top {
+	padding: 10px;
+}
+.pin-normal .pin-figure {
+	width: 32%;
+	height: auto;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.pin-normal .pin-title {font-size: 18px;}
+.pin-normal .pin-list-item .fa {color: #F1F1F1;}
+.pin-normal .pin-separator {border-color: #C5C5C5;}
